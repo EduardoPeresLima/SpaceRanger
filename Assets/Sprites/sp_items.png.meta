@@ -86,6 +86,9 @@ TextureImporter:
   - first:
       213: 2011721633728507606
     second: sp_projectile1
+  - first:
+      213: -7563560625967427876
+    second: sp_projectile2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -774,7 +777,7 @@ TextureImporter:
         width: 4
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -782,6 +785,27 @@ TextureImporter:
       bones: []
       spriteID: 6de2b55da221beb10800000000000000
       internalID: 2011721633728507606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sp_projectile2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 64
+        width: 3
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde84142fa5d80790800000000000000
+      internalID: -7563560625967427876
       vertices: []
       indices: 
       edges: []
