@@ -36,4 +36,19 @@ public class ShipMovement : MonoBehaviour
         _animator.SetInteger("Direction",(int)facing);
         rig.velocity = (velocity * (int)facing)*Vector2.right;
     }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Asteroid"))
+        {
+            other.GetComponent<AsteroidController>().Death();
+            Death();
+        }
+    }
+
+    void Death()
+    {
+        //Explosion
+        Destroy(gameObject);
+    }
 }
