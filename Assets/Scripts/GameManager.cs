@@ -34,4 +34,9 @@ public class GameManager : MonoBehaviour
     {
         GamePaused = false;
     }
+
+    public void GameOver()
+    {
+        _uiManager.GameOver(currentPoints);
+    }
 }

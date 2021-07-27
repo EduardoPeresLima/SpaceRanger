@@ -49,6 +49,7 @@ public class ShipMovement : MonoBehaviour
     void Death()
     {
         //Explosion
+        GameManager.Instance.GameOver();
         Destroy(gameObject);
     }
 }
