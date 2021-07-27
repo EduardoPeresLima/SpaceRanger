@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
 {
+    private const float maxYToDie = 15f;
+    private const float upVelocity = 2f;
     private Rigidbody2D rig;
-    private float upVelocity = 2f;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -15,6 +16,11 @@ public class ProjectileMovement : MonoBehaviour
 
     void Update()
     {
-        
+        VerifyDeath();
+    }
+
+    void VerifyDeath()
+    {
+        if (transform.position.y > maxYToDie) Destroy(gameObject);
     }
 }
