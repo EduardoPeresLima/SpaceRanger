@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AsteroidController : MonoBehaviour
 {
@@ -17,11 +20,17 @@ public class AsteroidController : MonoBehaviour
     }
     void Update()
     {
-        VerifyDeath();
+        VerifyDeathByOffBounds();
     }
 
-    void VerifyDeath()
+    void VerifyDeathByOffBounds()
     {
-        if (transform.position.y < minYToDie) Destroy(gameObject);
+        if (transform.position.y < minYToDie) Death();
+    }
+
+    public void Death()
+    {
+        //Explosion
+        Destroy(gameObject);
     }
 }
