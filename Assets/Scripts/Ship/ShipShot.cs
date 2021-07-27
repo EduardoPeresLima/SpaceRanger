@@ -15,6 +15,7 @@ public class ShipShot : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.GamePaused) return;
         time -= Time.deltaTime;
         if (time <= 0)
         {

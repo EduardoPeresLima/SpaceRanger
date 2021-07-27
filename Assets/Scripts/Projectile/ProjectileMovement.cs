@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
@@ -12,14 +9,19 @@ public class ProjectileMovement : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         rig.velocity = Vector2.up * upVelocity;
-        Destroy(gameObject,5f);
     }
 
     void Update()
     {
+        VerifyGamePaused();
         VerifyDeath();
     }
 
+    void VerifyGamePaused()
+    {
+        if(GameManager.Instance.GamePaused)rig.velocity = Vector2.zero;
+        else rig.velocity = Vector2.up * upVelocity;
+    }
     void VerifyDeath()
     {
         if (transform.position.y > maxYToDie) Destroy(gameObject);
@@ -28,7 +30,9 @@ public class ProjectileMovement : MonoBehaviour
     {
         if (other.CompareTag("Asteroid"))
         {
-            other.GetComponent<AsteroidController>().Death();
+            AsteroidController asteroid = other.GetComponent<AsteroidController>();
+            GameManager.Instance.AddPoints(asteroid.pointsGivenWheDestroyed);
+            asteroid.Death();
             Death();
         }
     }

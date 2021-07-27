@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Obstacle
   - Projectile
+  - Asteroid
   layers:
   - Default
   - TransparentFX
