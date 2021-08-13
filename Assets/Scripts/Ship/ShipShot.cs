@@ -10,18 +10,22 @@ public class ShipShot : MonoBehaviour
 
     private void Start()
     {
-        time = timeBetweenShots;
+        time = 0;
     }
 
     void Update()
     {
         if (GameManager.Instance.GamePaused) return;
-        time -= Time.deltaTime;
-        if (time <= 0)
+        if (Input.GetMouseButton(0))
         {
-            Shoot();
-            time = timeBetweenShots;
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                Shoot();
+                time = timeBetweenShots;
+            }
         }
+        else time = 0;
     }
 
     void Shoot()
