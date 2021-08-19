@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8836324066150182975}
   - component: {fileID: 4613441368421332511}
   m_Layer: 0
-  m_Name: Asteroid0
+  m_Name: Asteroid1
   m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5916337221108581960, guid: f1f529ddfeb4b6942aebcfcfe8a4a7a9, type: 3}
+  m_Sprite: {fileID: -3760755378039620927, guid: f1f529ddfeb4b6942aebcfcfe8a4a7a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,9 +98,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.010098219}
+  m_Offset: {x: 0, y: 0.0006160736}
   serializedVersion: 2
-  m_Radius: 0.34142137
+  m_Radius: 0.28194267
 --- !u!50 &8836324066150182975
 Rigidbody2D:
   serializedVersion: 4

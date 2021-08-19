@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.755301, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1264,6 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsText: {fileID: 360158036}
+  coinsText: {fileID: 1309963685}
   PauseMenuPanel: {fileID: 1823972212}
   GameOverPanel: {fileID: 1157220438}
   gameOverText: {fileID: 1494080657}
@@ -1300,7 +1301,7 @@ RectTransform:
   - {fileID: 913697727}
   - {fileID: 768740728}
   m_Father: {fileID: 2091279891}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1477,6 +1478,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241017776}
+  m_CullTransparentMesh: 1
+--- !u!1 &1309963683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1309963684}
+  - component: {fileID: 1309963686}
+  - component: {fileID: 1309963685}
+  m_Layer: 5
+  m_Name: CoinsText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1309963684
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309963683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2091279891}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.018000001, y: 0.90200007}
+  m_AnchorMax: {x: 0.37522227, y: 0.929}
+  m_AnchoredPosition: {x: 1, y: 0}
+  m_SizeDelta: {x: -0.980011, y: -1.5599976}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1309963685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309963683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.9880785, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 6e58f7f0eee9ff74db0e215d6526a2f2, type: 3}
+    m_FontSize: 23
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Coins: 0'
+--- !u!222 &1309963686
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309963683}
   m_CullTransparentMesh: 1
 --- !u!1 &1334178848
 GameObject:
@@ -2183,6 +2263,8 @@ MonoBehaviour:
   YSpawnPoint: {fileID: 40531075}
   asteroidPrefabs:
   - {fileID: 6788349121679909828, guid: 00c0a320e34d50843814a6a1aeff6303, type: 3}
+  - {fileID: 6788349121679909828, guid: c4838633dcb3d2e43bbe758f0835dec0, type: 3}
+  - {fileID: 6788349121679909828, guid: 6bdf0f95dbfac2d49a3c86b3470b85e7, type: 3}
   spacing: 20
 --- !u!1 &1812513625
 GameObject:
@@ -2297,7 +2379,7 @@ RectTransform:
   - {fileID: 1241017777}
   - {fileID: 1751128826}
   m_Father: {fileID: 2091279891}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2590,6 +2672,7 @@ RectTransform:
   m_Children:
   - {fileID: 127207359}
   - {fileID: 360158035}
+  - {fileID: 1309963684}
   - {fileID: 1823972213}
   - {fileID: 1157220439}
   m_Father: {fileID: 0}

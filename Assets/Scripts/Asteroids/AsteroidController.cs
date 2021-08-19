@@ -4,6 +4,7 @@ using Random = UnityEngine.Random;
 public class AsteroidController : MonoBehaviour
 {
     public int pointsGivenWheDestroyed;
+    public int coinsGivenWheDestroyed;
     private const float minVelocity = 1f;
     private const float maxVelocity = 4f;
     private const float minYToDie = -5f;

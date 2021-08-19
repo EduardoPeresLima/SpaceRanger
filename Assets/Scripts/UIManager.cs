@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private Text pointsText;
+    [SerializeField] private Text coinsText;
     [SerializeField] private GameObject PauseMenuPanel;
     [SerializeField] private GameObject GameOverPanel;
     [SerializeField] private Text gameOverText;
@@ -14,7 +15,10 @@ public class UIManager : MonoBehaviour
     {
         pointsText.text = "Points: " + currentPoints;
     }
-    
+    public void UpdateCoins(int currentCoins)
+    {
+        coinsText.text = "Coins: " + currentCoins;
+    }
 
     public void PauseGame()
     {

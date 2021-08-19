@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     }
 
     private int currentPoints;
+    private int currentCoins;
     void Start()
     {
         currentPoints = 0;
@@ -25,6 +26,11 @@ public class GameManager : MonoBehaviour
         _uiManager.UpdatePoints(currentPoints);
     }
 
+    public void AddCoins(int deltaCoins)
+    {
+        currentCoins += deltaCoins;
+        _uiManager.UpdateCoins(currentCoins);
+    }
     public void PauseGame()
     {
         GamePaused = true;

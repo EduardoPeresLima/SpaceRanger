@@ -32,6 +32,7 @@ public class ProjectileMovement : MonoBehaviour
         {
             AsteroidController asteroid = other.GetComponent<AsteroidController>();
             GameManager.Instance.AddPoints(asteroid.pointsGivenWheDestroyed);
+            GameManager.Instance.AddCoins(asteroid.coinsGivenWheDestroyed);
             asteroid.Death();
             Death();
         }
